@@ -1,7 +1,7 @@
 const key = process.env.REACT_APP_API_KEY
 
 export function getPopularVideos() {
-    return fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=${key}`).then(res => res.json())
+    return fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&maxResults=25&key=${key}`).then(res => res.json())
 }
 
 export function getOneVideo(id) {
