@@ -5,6 +5,7 @@ import About from "./components/About";
 // import Nav from "./components/navbar";
 import DevsAbout from "./components/DevsAbout";
 import ProjectDesc from "./components/ProjectDesc";
+// import Preview from "./components/Preview";
 
 import "./App.css";
 
@@ -20,7 +21,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/About" element={<About />} />
               <Route path="/DevsAbout" element={<DevsAbout />} />
-              <Route path="/ProjectDesc" element={<ProjectDesc />}></Route>
+              <Route path="/ProjectDesc" element={<ProjectDesc />} />
             </Routes>
           </main>
         </div>

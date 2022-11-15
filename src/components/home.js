@@ -15,17 +15,17 @@ export default function Home() {
     setSearchTitle(title);
   }
 
-  // useEffect(() => {
-  //   getPopularVideos()
-  //     .then((res) => {
-  //       setPopularVideos(res);
-  //       setLoadingError(false);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //       setLoadingError(true);
-  //     });
-  // }, []);
+  useEffect(() => {
+    getPopularVideos()
+      .then((res) => {
+        setPopularVideos(res);
+        setLoadingError(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoadingError(true);
+      });
+  }, []);
 
   return (
     <section>
@@ -46,9 +46,10 @@ export default function Home() {
             <button>Submit</button>
           </form>
           <section>
-            {/* {popularVideos.items.map((video) => {
-              return <Preview video={video} key={video.id} />;
-            })} */}
+            {popularVideos.items &&
+              popularVideos.items.map((video) => {
+                return <Preview video={video} key={video.id} />;
+              })}
             {/* causes ERROR ^ cannot read map in console */}
           </section>
         </div>
