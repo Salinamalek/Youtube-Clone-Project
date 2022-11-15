@@ -6,14 +6,14 @@ import Preview from "./Preview";
 import ErrorMessage from "./ErrorMessage";
 
 export default function Home() {
-    const [loadingError, setLoadingError] = useState(false)
-    const [popularVideos, setPopularVideos] = useState([])
-    const [searchTitle, setSearchTitle] = useState("")
+  const [loadingError, setLoadingError] = useState(false);
+  const [popularVideos, setPopularVideos] = useState([]);
+  const [searchTitle, setSearchTitle] = useState("");
 
-    function handleTextChange(e) {
-        const title = e.target.value
-        setSearchTitle(title)
-    }
+  function handleTextChange(e) {
+    const title = e.target.value;
+    setSearchTitle(title);
+  }
 
     // useEffect(() => {
     //     getPopularVideos()
