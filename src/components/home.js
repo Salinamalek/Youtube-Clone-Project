@@ -27,6 +27,8 @@ export default function Home() {
   //     });
   // }, []);
 
+  // console.log(getPopularVideos());
+
   return (
     <section>
       {loadingError ? (
@@ -46,10 +48,10 @@ export default function Home() {
             <button>Submit</button>
           </form>
           <section>
-            {popularVideos.items &&
+            {/* {popularVideos.items &&
               popularVideos.items.map((video) => {
                 return <Preview video={video} key={video.id} />;
-              })}
+              })} */}
             {/* causes ERROR ^ cannot read map in console */}
           </section>
         </div>
