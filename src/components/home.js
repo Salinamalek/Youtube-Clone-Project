@@ -52,7 +52,7 @@ export default function Home() {
               popularVideos.items.map((video) => {
                 return <Preview video={video} key={video.id} />;
               })} */}
-            {/* causes ERROR ^ cannot read map in console */}
+            {/* causes ERROR ^ cannot read map in console -> API quota issue */}
           </section>
         </div>
       )}
