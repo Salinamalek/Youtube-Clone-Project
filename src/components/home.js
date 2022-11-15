@@ -15,17 +15,17 @@ export default function Home() {
         setSearchTitle(title)
     }
 
-    useEffect(() => {
-        getPopularVideos()
-        .then(res => {
-            setPopularVideos(res)
-            setLoadingError(false)
-        })
-        .catch(err => {
-            console.log(err)
-            setLoadingError(true)
-        })
-    }, [])
+    // useEffect(() => {
+    //     getPopularVideos()
+    //     .then(res => {
+    //         setPopularVideos(res)
+    //         setLoadingError(false)
+    //     })
+    //     .catch(err => {
+    //         console.log(err)
+    //         setLoadingError(true)
+    //     })
+    // }, [])
 
     return (
         <section>
@@ -43,11 +43,11 @@ export default function Home() {
                 />
             </label>
             <section>
-                {popularVideos.items.map((video) => {
+                {/* {popularVideos.items.map((video) => {
                     return (
                         <Preview video={video} key={video.id}/> 
                     )
-                })}
+                })} */}
             </section>
             </div>
             )}
