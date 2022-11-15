@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/header";
-import Home from "./components/home";
-import About from "./components/about";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import About from "./components/About";
 // import Nav from "./components/navbar";
+import DevsAbout from "./components/DevsAbout";
+import ProjectDesc from "./components/ProjectDesc";
 
 import "./App.css";
 
@@ -16,7 +18,9 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/About" element={<About />} />
+              <Route path="/DevsAbout" element={<DevsAbout />} />
+              <Route path="/ProjectDesc" element={<ProjectDesc />}></Route>
             </Routes>
           </main>
         </div>

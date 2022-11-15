@@ -15,17 +15,17 @@ export default function Home() {
     setSearchTitle(title);
   }
 
-  useEffect(() => {
-    getPopularVideos()
-      .then((res) => {
-        setPopularVideos(res);
-        setLoadingError(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoadingError(true);
-      });
-  }, []);
+  // useEffect(() => {
+  //   getPopularVideos()
+  //     .then((res) => {
+  //       setPopularVideos(res);
+  //       setLoadingError(false);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       setLoadingError(true);
+  //     });
+  // }, []);
 
   return (
     <section>
