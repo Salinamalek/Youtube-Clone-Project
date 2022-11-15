@@ -3,7 +3,11 @@ export default function DevsAbout() {
     <section>
       <div className="salina">
         <h1>Salina Malek</h1>
-        <p>Hello World</p>
+        <p>
+          Hello world! My name is Salina (pronounced as Selena or 'suh-lee-na')
+          and I am a fellow at Pursuit studying to become a fullstack web
+          developer!
+        </p>
         <a
           href="https://github.com/Salinamalek"
           target="_blank"

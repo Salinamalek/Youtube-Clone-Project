@@ -33,15 +33,18 @@ export default function Home() {
         <ErrorMessage />
       ) : (
         <div>
-          <label htmlFor="searchTitle">
-            Search
-            <input
-              type="text"
-              value={searchTitle}
-              id="searchTitle"
-              onChange={handleTextChange}
-            />
-          </label>
+          <form>
+            <label htmlFor="searchTitle">
+              Search:
+              <input
+                type="text"
+                value={searchTitle}
+                id="searchTitle"
+                onChange={handleTextChange}
+              />
+            </label>
+            <button>Submit</button>
+          </form>
           <section>
             {/* {popularVideos.items.map((video) => {
               return <Preview video={video} key={video.id} />;
