@@ -6,51 +6,50 @@ import Preview from "./Preview";
 import ErrorMessage from "./ErrorMessage";
 
 export default function Home() {
-    const [loadingError, setLoadingError] = useState(false)
-    const [popularVideos, setPopularVideos] = useState([])
-    const [searchTitle, setSearchTitle] = useState("")
+  const [loadingError, setLoadingError] = useState(false);
+  const [popularVideos, setPopularVideos] = useState([]);
+  const [searchTitle, setSearchTitle] = useState("");
 
-    function handleTextChange(e) {
-        const title = e.target.value
-        setSearchTitle(title)
-    }
+  function handleTextChange(e) {
+    const title = e.target.value;
+    setSearchTitle(title);
+  }
 
-    useEffect(() => {
-        getPopularVideos()
-        .then(res => {
-            setPopularVideos(res)
-            setLoadingError(false)
-        })
-        .catch(err => {
-            console.log(err)
-            setLoadingError(true)
-        })
-    }, [])
+  useEffect(() => {
+    getPopularVideos()
+      .then((res) => {
+        setPopularVideos(res);
+        setLoadingError(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoadingError(true);
+      });
+  }, []);
 
-    return (
-        <section>
-            {loadingError ? (
-                <ErrorMessage />
-            ) : (
-                <div>
-            <label htmlFor="searchTitle">
-                Search
-                <input
-                type="text"
-                value={searchTitle}
-                id="searchTitle"
-                onChange={handleTextChange}
-                />
-            </label>
-            <section>
-                {popularVideos.items.map((video) => {
-                    return (
-                        <Preview video={video} key={video.id}/> 
-                    )
-                })}
-            </section>
-            </div>
-            )}
-        </section>
-    );
-  };
+  return (
+    <section>
+      {loadingError ? (
+        <ErrorMessage />
+      ) : (
+        <div>
+          <label htmlFor="searchTitle">
+            Search
+            <input
+              type="text"
+              value={searchTitle}
+              id="searchTitle"
+              onChange={handleTextChange}
+            />
+          </label>
+          <section>
+            {/* {popularVideos.items.map((video) => {
+              return <Preview video={video} key={video.id} />;
+            })} */}
+            {/* causes ERROR ^ cannot read map in console */}
+          </section>
+        </div>
+      )}
+    </section>
+  );
+}
