@@ -2,20 +2,24 @@
   margin: 0 auto;
 }
 
-App {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
+.App {
+  /* display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr; */
+  text-align: center;
 }
 
 header {
   background-color: rgb(255, 0, 0);
   color: white;
-  /* border-radius: 15px; */
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /* #youtube {
   background-color: red;
   color: white;
   width: 130px;
+  border-radius: 15px;
 } */
