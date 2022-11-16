@@ -8,7 +8,7 @@ const key = process.env.REACT_APP_API_KEY;
 
 export default function Search() {
   const [searchTitle, setSearchTitle] = useState("");
-  const [searchVideos, setSearchVideos] = useState();
+  const [searchVideos, setSearchVideos] = useState([]);
   const [loadingError, setLoadingError] = useState(false);
 
   function handleTextChange(e) {

@@ -10,17 +10,17 @@ export default function Home() {
   const [loadingError, setLoadingError] = useState(false);
   const [popularVideos, setPopularVideos] = useState([]);
 
-  useEffect(() => {
-    getPopularVideos()
-      .then((res) => {
-        setPopularVideos(res);
-        setLoadingError(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoadingError(true);
-      });
-  }, []);
+  //   useEffect(() => {
+  //     getPopularVideos()
+  //       .then((res) => {
+  //         setPopularVideos(res);
+  //         setLoadingError(false);
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //         setLoadingError(true);
+  //       });
+  //   }, []);
 
   return (
     <section>
@@ -41,12 +41,12 @@ export default function Home() {
             <button>Submit</button>
           </form> */}
           <section>
-            {/* {popularVideos.items &&
+            {popularVideos.items &&
               popularVideos.items.map((video) => {
                 return <Preview video={video} key={video.id.videoId} />;
-              })} */}
-            {/* COMMENT BACK IN FOR VIDEOS^  */}
-          </section>
+              })}
+          </section>{" "}
+          */}
         </div>
       )}
     </section>
