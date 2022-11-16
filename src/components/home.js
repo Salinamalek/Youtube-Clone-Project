@@ -41,10 +41,11 @@ export default function Home() {
             <button>Submit</button>
           </form> */}
           <section>
-            {popularVideos.items &&
+            {/* {popularVideos.items &&
               popularVideos.items.map((video) => {
-                return <Preview video={video} key={video.id} />;
-              })}
+                return <Preview video={video} key={video.id.videoId} />;
+              })} */}
+            {/* COMMENT BACK IN FOR VIDEOS^  */}
           </section>
         </div>
       )}
