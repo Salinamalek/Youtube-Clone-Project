@@ -22,24 +22,33 @@ export default function Search() {
     )
       .then((res) => res.json())
       .then((res) => {
-        setSearchVideos(res.items);
+        setSearchVideos(res);
       });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     searchYoutube(searchTitle);
+    event.target.reset(); // clears form
   }
 
   console.log(searchVideos);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Search
-        <input type="text" name="search" onChange={handleTextChange} />
-      </label>
-      <input type="submit" value="Submit" />
-    </form>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Search:{" "}
+          <input type="text" name="search" onChange={handleTextChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+      <section>
+        {searchVideos.items &&
+          searchVideos.items.map((video) => {
+            return <Preview video={video} key={video.id.videoId} />;
+          })}
+      </section>
+    </div>
   );
 }

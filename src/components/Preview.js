@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
+
 export default function Preview({ video }) {
   return (
     <div className="video">
-      <h2>{video.snippet.title}</h2>
+      <h2>
+        <Link to={`/${video.id.videoId}`}> {video.snippet.title} </Link>
+      </h2>
       <img src={video.snippet.thumbnails.medium.url} />
       <h4>{video.snippet.channelTitle}</h4>
       <p>
