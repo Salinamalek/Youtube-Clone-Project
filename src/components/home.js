@@ -3,17 +3,12 @@ import { useState, useEffect } from "react";
 import { getPopularVideos } from "../api/fetch";
 
 import Preview from "./Preview";
+import Search from "./Search";
 import ErrorMessage from "./ErrorMessage";
 
 export default function Home() {
   const [loadingError, setLoadingError] = useState(false);
   const [popularVideos, setPopularVideos] = useState([]);
-  const [searchTitle, setSearchTitle] = useState("");
-
-  function handleTextChange(e) {
-    const title = e.target.value;
-    setSearchTitle(title);
-  }
 
     // useEffect(() => {
     //     getPopularVideos()
@@ -33,22 +28,14 @@ export default function Home() {
                 <ErrorMessage />
             ) : (
                 <div>
-            <label htmlFor="searchTitle">
-                Search
-                <input
-                type="text"
-                value={searchTitle}
-                id="searchTitle"
-                onChange={handleTextChange}
-                />
-            </label>
-            <section>
-                {/* {popularVideos.items.map((video) => {
+            <Search />
+            {/* <section>
+                {popularVideos.items.map((video) => {
                     return (
                         <Preview video={video} key={video.id}/> 
                     )
-                })} */}
-            </section>
+                })}
+            </section> */}
             </div>
             )}
         </section>
