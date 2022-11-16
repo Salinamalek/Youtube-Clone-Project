@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-import { getSearch } from "../api/fetch";
 import Preview from "./Preview";
 import ErrorMessage from "./ErrorMessage";
+import SearchResults from "./SearchResults";
+import { Link } from "react-router-dom";
 
 const key = process.env.REACT_APP_API_KEY
 
@@ -29,8 +30,6 @@ export default function Search() {
         searchYoutube(searchTitle)
     }
 
-    console.log(searchVideos)
-
     return (
         <div>
         <form onSubmit={handleSubmit}>
@@ -38,7 +37,9 @@ export default function Search() {
                 Search
                 <input type="text" name="search" onChange={handleTextChange}/>
             </label>
-            <input type="submit" value="Submit" />
+            {/* <Link to="/SearchResults" > */}
+            <input type="submit" value="Submit" />  
+            {/* </Link> */}
         </form>
         <section>
             {searchVideos.items &&

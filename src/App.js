@@ -6,8 +6,11 @@ import About from "./components/About";
 import DevsAbout from "./components/DevsAbout";
 import ProjectDesc from "./components/ProjectDesc";
 // import Preview from "./components/Preview";
+import Video from "./components/Video";
 
 import "./App.css";
+import Search from "./components/Search";
+import SearchResults from "./components/SearchResults";
 
 function App() {
   return (
@@ -22,6 +25,8 @@ function App() {
               <Route path="/About" element={<About />} />
               <Route path="/DevsAbout" element={<DevsAbout />} />
               <Route path="/ProjectDesc" element={<ProjectDesc />} />
+              <Route path="/SearchResults" element={ <SearchResults />} />
+              <Route path="/SearchResults:id" element={ <Video />} />
             </Routes>
           </main>
         </div>
