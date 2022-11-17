@@ -36,7 +36,7 @@ export default function Search() {
     <div>
       <form onSubmit={handleSubmit}>
         <label>
-          Search
+          Search:{" "}
           <input type="text" name="search" onChange={handleTextChange} />
         </label>
         {/* <Link to="/searchresults" > */}
