@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { getPopularVideos } from "../api/fetch";
 
-import Preview from "./Preview";
+import PopularPreview from "./PopularPreview";
 import Search from "./Search";
 import ErrorMessage from "./ErrorMessage";
 
@@ -10,17 +10,17 @@ export default function Home() {
   const [loadingError, setLoadingError] = useState(false);
   const [popularVideos, setPopularVideos] = useState([]);
 
-//   useEffect(() => {
-//     getPopularVideos()
-//       .then((res) => {
-//         setPopularVideos(res);
-//         setLoadingError(false);
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//         setLoadingError(true);
-//       });
-//   }, []);
+  useEffect(() => {
+    getPopularVideos()
+      .then((res) => {
+        setPopularVideos(res);
+        setLoadingError(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoadingError(true);
+      });
+  }, []);
 
   return (
     <section>
@@ -29,12 +29,12 @@ export default function Home() {
       ) : (
         <div>
           <Search />
-          {/* <section>
+          <section>
             {popularVideos.items &&
               popularVideos.items.map((video) => {
-                return <Preview video={video} key={video.id.videoId} />;
+                return <PopularPreview video={video} key={video.id.videoId} />;
               })}
-          </section> */}
+          </section>
         </div>
       )}
     </section>
