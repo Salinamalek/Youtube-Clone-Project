@@ -18,15 +18,14 @@ function App() {
       <Router>
         <Header />
         <div className="wrapper">
-          {/* <Nav /> */}
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/About" element={<About />} />
               <Route path="/DevsAbout" element={<DevsAbout />} />
               <Route path="/ProjectDesc" element={<ProjectDesc />} />
-              <Route path="/SearchResults" element={ <SearchResults />} />
-              <Route path="/SearchResults:id" element={ <Video />} />
+              {/* <Route path="/searchresults" element={ <SearchResults />} /> */}
+              {/* <Route path="/searchresults/:id" element={ <Video />} /> */}
             </Routes>
           </main>
         </div>

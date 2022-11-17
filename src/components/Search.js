@@ -29,7 +29,7 @@ export default function Search() {
         event.preventDefault()
         searchYoutube(searchTitle)
     }
-
+    console.log(searchVideos)
     return (
         <div>
         <form onSubmit={handleSubmit}>
@@ -37,16 +37,18 @@ export default function Search() {
                 Search
                 <input type="text" name="search" onChange={handleTextChange}/>
             </label>
-            {/* <Link to="/SearchResults" > */}
+            {/* <Link to="/searchresults" > */}
             <input type="submit" value="Submit" />  
             {/* </Link> */}
         </form>
-        <section>
+
+       {searchVideos && <SearchResults searchVideos={searchVideos} />}
+        {/* <section>
             {searchVideos.items &&
               searchVideos.items.map((video) => {
                 return <Preview video={video} key={video.id.videoId} />;
               })}
-          </section>
+          </section> */}
         </div>
     )
 }
