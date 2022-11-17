@@ -30,7 +30,9 @@ export default function Search() {
   function handleSubmit(event) {
     event.preventDefault();
     searchYoutube(searchTitle);
+    event.target.reset();
   }
+
   console.log(searchVideos);
   return (
     <div>

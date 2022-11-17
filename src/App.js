@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from "react";
+import "./components/DarkMode.css";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -13,10 +16,28 @@ import Search from "./components/Search";
 import SearchResults from "./components/SearchResults";
 
 function App() {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    document.body.className = theme;
+  }, [theme]);
+
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <Router>
         <Header />
+        <button className="theme" onClick={toggleTheme}>
+          Toggle Theme
+        </button>
+        <br />
+        <br />
         <div className="wrapper">
           <main>
             <Routes>
@@ -24,7 +45,7 @@ function App() {
               <Route path="/About" element={<About />} />
               <Route path="/DevsAbout" element={<DevsAbout />} />
               <Route path="/ProjectDesc" element={<ProjectDesc />} />
-              {/* <Route path="/searchresults" element={ <SearchResults />} /> */}
+              {/* <Route path="/searchresults" element={<SearchResults />} /> */}
               <Route path="/video/:id" element={<Video />} />
             </Routes>
           </main>
