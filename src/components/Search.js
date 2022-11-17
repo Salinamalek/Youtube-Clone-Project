@@ -5,7 +5,7 @@ import ErrorMessage from "./ErrorMessage";
 import SearchResults from "./SearchResults";
 import { Link } from "react-router-dom";
 
-const key = process.env.REACT_APP_API_KEY
+const key = process.env.REACT_APP_API_KEY;
 
 export default function Search() {
     const [searchTitle, setSearchTitle] = useState("");
@@ -50,6 +50,6 @@ export default function Search() {
                 return <Preview video={video} key={video.id.videoId} />;
               })}
           </section> */}
-        </div>
-    )
+    </div>
+  );
 }

@@ -4,10 +4,10 @@ export default function Preview({ video }) {
   return (
     <div className="video">
       <h2>
-        <Link to={`/video/${video.id.videoId}`} >{video.snippet.title}</Link>
+        <Link to={`/video/${video.id.videoId}`}>{video.snippet.title}</Link>
       </h2>
       <Link to={`/video/${video.id.videoId}`}>
-      <img src={video.snippet.thumbnails.medium.url} />
+        <img src={video.snippet.thumbnails.medium.url} />
       </Link>
       <h4>{video.snippet.channelTitle}</h4>
       {/* Stretch feature: Make channels clickable */}
