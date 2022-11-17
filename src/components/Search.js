@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-import { getSearch } from "../api/fetch";
 import Preview from "./Preview";
 import ErrorMessage from "./ErrorMessage";
+import SearchResults from "./SearchResults";
+import { Link } from "react-router-dom";
 
 const key = process.env.REACT_APP_API_KEY;
 
@@ -29,26 +30,27 @@ export default function Search() {
   function handleSubmit(event) {
     event.preventDefault();
     searchYoutube(searchTitle);
-    event.target.reset(); // clears form
   }
-
   console.log(searchVideos);
-
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <label>
-          Search:{" "}
+          Search
           <input type="text" name="search" onChange={handleTextChange} />
         </label>
+        {/* <Link to="/searchresults" > */}
         <input type="submit" value="Submit" />
+        {/* </Link> */}
       </form>
-      <section>
-        {searchVideos.items &&
-          searchVideos.items.map((video) => {
-            return <Preview video={video} key={video.id.videoId} />;
-          })}
-      </section>
+
+      {searchVideos && <SearchResults searchVideos={searchVideos} />}
+      {/* <section>
+            {searchVideos.items &&
+              searchVideos.items.map((video) => {
+                return <Preview video={video} key={video.id.videoId} />;
+              })}
+          </section> */}
     </div>
   );
 }
