@@ -6,21 +6,21 @@ import PopularPreview from "./PopularPreview";
 import Search from "./Search";
 import ErrorMessage from "./ErrorMessage";
 
-export default function Home() {
+export default function Home({popularVideos}) {
   const [loadingError, setLoadingError] = useState(false);
-  const [popularVideos, setPopularVideos] = useState([]);
+//   const [popularVideos, setPopularVideos] = useState([]);
 
-  useEffect(() => {
-    getPopularVideos()
-      .then((res) => {
-        setPopularVideos(res);
-        setLoadingError(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoadingError(true);
-      });
-  }, []);
+//   useEffect(() => {
+//     getPopularVideos()
+//       .then((res) => {
+//         setPopularVideos(res);
+//         setLoadingError(false);
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//         setLoadingError(true);
+//       });
+//   }, []);
 
   return (
     <section>
@@ -32,7 +32,7 @@ export default function Home() {
           <section>
             {popularVideos.items &&
               popularVideos.items.map((video) => {
-                return <PopularPreview video={video} key={video.id.videoId} />;
+                return <PopularPreview video={video} key={video.id} />;
               })}
           </section>
         </div>

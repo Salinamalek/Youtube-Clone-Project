@@ -8,7 +8,7 @@ export function getPopularVideos() {
 
 export function getOneVideo(id) {
   return fetch(
-    `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}key=${key}`
+    `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=${key}`
   ).then((res) => res.json());
 }
 

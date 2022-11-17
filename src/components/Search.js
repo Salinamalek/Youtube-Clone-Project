@@ -28,8 +28,9 @@ export default function Search() {
     function handleSubmit(event) {
         event.preventDefault()
         searchYoutube(searchTitle)
+        event.target.reset()
     }
-    console.log(searchVideos)
+    
     return (
         <div>
         <form onSubmit={handleSubmit}>
@@ -37,7 +38,7 @@ export default function Search() {
                 Search
                 <input type="text" name="search" onChange={handleTextChange}/>
             </label>
-            {/* <Link to="/searchresults" > */}
+            {/* <Link to="/searchresults" state={searchVideos} > */}
             <input type="submit" value="Submit" />  
             {/* </Link> */}
         </form>
