@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./components/DarkMode.css";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { getPopularVideos } from "./api/fetch";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
-// import Nav from "./components/navbar";
 import DevsAbout from "./components/DevsAbout";
-import ProjectDesc from "./components/ProjectDesc";
-// import Preview from "./components/Preview";
+import ProjectDesc from "./components/ProjectDesc"; 
 import Video from "./components/Video";
 
 import "./App.css";
@@ -16,6 +15,11 @@ import Search from "./components/Search";
 import SearchResults from "./components/SearchResults";
 
 function App() {
+  const [popularVideos, setPopularVideos] = useState([]);
+  const [searchVideos, setSearchVideos] = useState([])
+
+  const key = process.env.REACT_APP_API_KEY;
+
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const toggleTheme = () => {
     if (theme === "light") {
@@ -28,6 +32,25 @@ function App() {
     localStorage.setItem("theme", theme);
     document.body.className = theme;
   }, [theme]);
+  
+
+  useEffect(() => {
+    getPopularVideos()
+      .then((res) => {
+        setPopularVideos(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  function searchYoutube(search) {
+    fetch (`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${search}&key=${key}`)
+    .then((res) => res.json())
+    .then((res) => {
+        setSearchVideos(res)
+    })
+}
 
   return (
     <div className={`App ${theme}`}>
@@ -41,7 +64,7 @@ function App() {
         <div className="wrapper">
           <main>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home popularVideos={popularVideos} searchVideos={searchVideos} searchYoutube={searchYoutube}/>} />
               <Route path="/About" element={<About />} />
               <Route path="/DevsAbout" element={<DevsAbout />} />
               <Route path="/ProjectDesc" element={<ProjectDesc />} />
