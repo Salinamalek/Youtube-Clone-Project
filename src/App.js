@@ -60,7 +60,7 @@ function App() {
           <Header />
         </div>
         <button className="theme" onClick={toggleTheme}>
-          Toggle Theme
+          ☾
         </button>
         <br />
         <br />
