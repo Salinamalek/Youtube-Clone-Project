@@ -45,14 +45,15 @@ function CommentsForm() {
         </button>
       </form>
       <ul className="comm">
-        {/* {setComments.map((c) => {
+        {comments.map((c) => {
           return (
             <li>
-              <p>{c.commenter}</p>
-              <p>"{c.comment}"</p>
+              <span className="commenterName">{c.commenter}</span>
+              <br />
+              <span className="commentText">{c.comment}</span>
             </li>
           );
-        })} */}
+        })}
         {addComment}
       </ul>
     </section>

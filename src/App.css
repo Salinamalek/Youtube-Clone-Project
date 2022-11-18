@@ -34,6 +34,7 @@ header {
   color: white;
   border-radius: 15px;
   padding: 4px 7px 4px 7px;
+  box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.26);
 }
 
 a {
@@ -56,11 +57,27 @@ a:hover {
   all: unset;
   background-color: rgb(215, 212, 212);
   border-radius: 25px;
-  padding: 15px;
-  box-shadow: 5px 5px 5px rgb(80, 79, 79);
+  padding: 5px 40px 5px 40px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   font-size: xx-large;
 }
 
 .theme:hover {
   background-color: rgb(209, 209, 209);
+}
+
+li {
+  list-style: none;
+  border: 3px dotted rgb(244, 130, 130);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0px 10px 0px;
+  text-align: left;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.commenterName {
+  font-weight: bold;
+  font-size: larger;
+  color: red;
 }
