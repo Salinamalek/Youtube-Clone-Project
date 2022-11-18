@@ -2,6 +2,7 @@ import { useState } from "react";
 function CommentsForm() {
   const [commenter, setCommenter] = useState("");
   const [comment, setComment] = useState("");
+  const [comments, setComments] = useState([]);
 
   function handleFormSubmit(e) {
     e.preventDefault();
@@ -11,7 +12,9 @@ function CommentsForm() {
   }
 
   function addComment() {
-    return { commenter: commenter, comment: comment };
+    const arr = [...comments];
+    arr.push({ commenter: commenter, comment: comment });
+    setComments(arr);
   }
 
   return (
@@ -19,7 +22,7 @@ function CommentsForm() {
       <hr className="hrForm"></hr>
       <h4>Leave a Comment: </h4>
       <form>
-        <label id="commenter">Commenter Name: </label>
+        <label id="commenter">Name: </label>
         <input
           type="text"
           id="commenter"
@@ -41,7 +44,17 @@ function CommentsForm() {
           Add Comment
         </button>
       </form>
-      {addComment}
+      <ul className="comm">
+        {/* {setComments.map((c) => {
+          return (
+            <li>
+              <p>{c.commenter}</p>
+              <p>"{c.comment}"</p>
+            </li>
+          );
+        })} */}
+        {addComment}
+      </ul>
     </section>
   );
 }
