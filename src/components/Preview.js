@@ -4,9 +4,9 @@ export default function Preview({ video }) {
   return (
     <div className="video">
       <h2>
-        <Link to={`/video/${video.id.videoId}`}>{video.snippet.title}</Link>
+        <Link to={`/video/${video.etag}`}>{video.snippet.title}</Link>
       </h2>
-      <Link to={`/video/${video.id.videoId}`}>
+      <Link to={`/video/${video.etag}`}>
         <img src={video.snippet.thumbnails.medium.url} />
       </Link>
       <h4>{video.snippet.channelTitle}</h4>

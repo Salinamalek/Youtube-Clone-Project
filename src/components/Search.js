@@ -7,22 +7,13 @@ import { Link } from "react-router-dom";
 
 const key = process.env.REACT_APP_API_KEY;
 
-export default function Search() {
+export default function Search({searchVideos, searchYoutube}) {
     const [searchTitle, setSearchTitle] = useState("");
-    const [searchVideos, setSearchVideos] = useState([])
     const [loadingError, setLoadingError] = useState(false);
 
     function handleTextChange(e) {
       const title = e.target.value;
       setSearchTitle(title);
-    }
-
-    function searchYoutube(search) {
-        fetch (`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${search}&key=${key}`)
-        .then((res) => res.json())
-        .then((res) => {
-            setSearchVideos(res)
-        })
     }
 
     function handleSubmit(event) {

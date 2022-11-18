@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./components/DarkMode.css";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState, useEffect } from "react";
 import { getPopularVideos } from "./api/fetch";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -12,11 +11,12 @@ import ProjectDesc from "./components/ProjectDesc";
 import Video from "./components/Video";
 
 import "./App.css";
-import Search from "./components/Search";
-import SearchResults from "./components/SearchResults";
 
 function App() {
   const [popularVideos, setPopularVideos] = useState([]);
+  const [searchVideos, setSearchVideos] = useState([])
+
+  const key = process.env.REACT_APP_API_KEY;
 
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const toggleTheme = () => {
@@ -42,6 +42,14 @@ function App() {
       });
   }, []);
 
+  function searchYoutube(search) {
+    fetch (`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${search}&key=${key}`)
+    .then((res) => res.json())
+    .then((res) => {
+        setSearchVideos(res)
+    })
+}
+
   return (
     <div className={`App ${theme}`}>
       <Router>
@@ -54,11 +62,10 @@ function App() {
         <div className="wrapper">
           <main>
             <Routes>
-              <Route path="/" element={<Home popularVideos={popularVideos}/>} />
+              <Route path="/" element={<Home popularVideos={popularVideos} searchVideos={searchVideos} searchYoutube={searchYoutube}/>} />
               <Route path="/About" element={<About />} />
               <Route path="/DevsAbout" element={<DevsAbout />} />
               <Route path="/ProjectDesc" element={<ProjectDesc />} />
-              {/* <Route path="/searchresults" element={<SearchResults />} /> */}
               <Route path="/video/:id" element={<Video />} />
             </Routes>
           </main>

@@ -5,7 +5,7 @@ import { getOneVideo } from "../api/fetch"
 import ErrorMessage from "./ErrorMessage"
 
 export default function Video() {
-    const [video, setVideo] = useState([])
+    const [video, setVideo] = useState({})
     const [loadingError, setLoadingError] = useState(false)
 
     const videoId = useParams()
@@ -21,9 +21,10 @@ export default function Video() {
             setLoadingError(true)
         })
     }, [videoId])
-    console.log(video)
-    console.log(videoId.id)
+
     return (
-        <h1>{video.items.snippet.title}</h1>
+        <div>
+        <h1>Hello{video.items[0].snippet.title}</h1>
+        </div>
     )
 }
