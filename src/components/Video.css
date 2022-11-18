@@ -2,9 +2,20 @@
   /* border: 2px solid black; */
   border-radius: 10px;
   /* display: block; */
-  box-shadow: 10px 5px 10px 5px rgb(65, 62, 62);
+  box-shadow: 10px 10px 10px 10px rgb(65, 62, 62);
   margin: 30px;
   margin-top: 30px;
   padding: 20px;
   width: 400px;
+}
+
+.indVideo {
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  /* display: block; */
+  box-shadow: 10px 10px 10px 10px rgb(65, 62, 62);
+  margin: 10px;
+  padding: 20px;
+  padding-top: 25px;
+  width: 800px;
 }

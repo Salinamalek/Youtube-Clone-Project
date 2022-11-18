@@ -23,7 +23,7 @@ export default function Video() {
   }, [videosId]);
 
   return (
-    <div className="video">
+    <div className="indVideo">
       <YouTube videoId={videosId.id} />
       <h1>{video.items ? video.items[0].snippet.title : "loading..."}</h1>
       <h3>
