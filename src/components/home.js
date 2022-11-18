@@ -6,21 +6,21 @@ import PopularPreview from "./PopularPreview";
 import Search from "./Search";
 import ErrorMessage from "./ErrorMessage";
 
-export default function Home({popularVideos, searchVideos, searchYoutube}) {
+export default function Home({ popularVideos, searchVideos, searchYoutube }) {
   const [loadingError, setLoadingError] = useState(false);
-//   const [popularVideos, setPopularVideos] = useState([]);
+  //   const [popularVideos, setPopularVideos] = useState([]);
 
-//   useEffect(() => {
-//     getPopularVideos()
-//       .then((res) => {
-//         setPopularVideos(res);
-//         setLoadingError(false);
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//         setLoadingError(true);
-//       });
-//   }, []);
+  //   useEffect(() => {
+  //     getPopularVideos()
+  //       .then((res) => {
+  //         setPopularVideos(res);
+  //         setLoadingError(false);
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //         setLoadingError(true);
+  //       });
+  //   }, []);
 
   return (
     <section>
