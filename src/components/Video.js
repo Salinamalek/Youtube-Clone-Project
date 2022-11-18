@@ -7,11 +7,10 @@ import ErrorMessage from "./ErrorMessage"
 export default function Video() {
     const [video, setVideo] = useState({})
     const [loadingError, setLoadingError] = useState(false)
-
-    const videoId = useParams()
+    const videosId = useParams()
 
     useEffect(() => {
-        getOneVideo(videoId.id)
+        getOneVideo(videosId.id)
         .then(res => {
             setVideo(res)
             setLoadingError(false)
@@ -20,11 +19,12 @@ export default function Video() {
             console.log(error)
             setLoadingError(true)
         })
-    }, [videoId])
-
+    }, [videosId])
+   
     return (
-        <div>
-        <h1>Hello{video.items[0].snippet.title}</h1>
-        </div>
+        <div className="video">
+        <YouTube videoId={videosId}/>
+        <h1>{video.items ? video.items[0].snippet.title : "loading..."}</h1>
+        </div> 
     )
 }

@@ -11,6 +11,8 @@ import ProjectDesc from "./components/ProjectDesc";
 import Video from "./components/Video";
 
 import "./App.css";
+import Search from "./components/Search";
+import SearchResults from "./components/SearchResults";
 
 function App() {
   const [popularVideos, setPopularVideos] = useState([]);
@@ -66,6 +68,7 @@ function App() {
               <Route path="/About" element={<About />} />
               <Route path="/DevsAbout" element={<DevsAbout />} />
               <Route path="/ProjectDesc" element={<ProjectDesc />} />
+              {/* <Route path="/searchresults" element={<SearchResults />} /> */}
               <Route path="/video/:id" element={<Video />} />
             </Routes>
           </main>
