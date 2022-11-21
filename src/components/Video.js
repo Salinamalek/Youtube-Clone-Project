@@ -4,12 +4,18 @@ import { useParams } from "react-router-dom";
 import { getOneVideo } from "../api/fetch";
 import ErrorMessage from "./ErrorMessage";
 import CommentsForm from "./CommentsForm";
+import ShowMore from "./ShowMore";
 import "./Video.css";
 
 export default function Video() {
   const [video, setVideo] = useState({});
   const [loadingError, setLoadingError] = useState(false);
   const videosId = useParams();
+  const [showMore, setShowMore] = useState(false);
+
+  function toggleShowMore() {
+    setShowMore(!showMore);
+  }
 
   useEffect(() => {
     getOneVideo(videosId.id)
@@ -39,8 +45,12 @@ export default function Video() {
           {video.items ? video.items[0].statistics.likeCount : "loading..."}{" "}
           Likes
         </p>
-        <p>{video.items ? video.items[0].snippet.description : "loading..."}</p>
+        {/* <p>{video.items ? video.items[0].snippet.description : "loading..."}</p> */}
+        <button key={videosId.id} id="showMoreButton" onClick={toggleShowMore}>
+          {!showMore ? "Show More ..." : "Show Less ..."}
+        </button>
       </div>
+      {showMore && <ShowMore />}
       <div className="commentsForm">
         <CommentsForm />
       </div>
