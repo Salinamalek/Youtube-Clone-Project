@@ -18,7 +18,7 @@ export default function Search({searchVideos, searchYoutube}) {
 
     function handleSubmit(event) {
         event.preventDefault()
-        searchYoutube(searchTitle)
+        // searchYoutube(searchTitle)
         event.target.reset()
     }
     
@@ -29,18 +29,10 @@ export default function Search({searchVideos, searchYoutube}) {
                 Search
                 <input type="text" name="search" onChange={handleTextChange}/>
             </label>
-            {/* <Link to="/searchresults" state={searchVideos} > */}
+            <Link to={`/searchresults/${searchTitle}`} >
             <input type="submit" value="Submit" />  
-            {/* </Link> */}
+            </Link>
         </form>
-
-       {searchVideos && <SearchResults searchVideos={searchVideos} />}
-        {/* <section>
-            {searchVideos.items &&
-              searchVideos.items.map((video) => {
-                return <Preview video={video} key={video.id.videoId} />;
-              })}
-          </section> */}
     </div>
   );
 }

@@ -6,21 +6,8 @@ import PopularPreview from "./PopularPreview";
 import Search from "./Search";
 import ErrorMessage from "./ErrorMessage";
 
-export default function Home({popularVideos, searchVideos, searchYoutube}) {
+export default function Home({popularVideos}) {
   const [loadingError, setLoadingError] = useState(false);
-//   const [popularVideos, setPopularVideos] = useState([]);
-
-//   useEffect(() => {
-//     getPopularVideos()
-//       .then((res) => {
-//         setPopularVideos(res);
-//         setLoadingError(false);
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//         setLoadingError(true);
-//       });
-//   }, []);
 
   return (
     <section>
@@ -28,7 +15,6 @@ export default function Home({popularVideos, searchVideos, searchYoutube}) {
         <ErrorMessage />
       ) : (
         <div>
-          <Search searchVideos={searchVideos} searchYoutube={searchYoutube} />
           <section>
             {popularVideos.items &&
               popularVideos.items.map((video) => {

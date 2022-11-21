@@ -16,7 +16,6 @@ import SearchResults from "./components/SearchResults";
 
 function App() {
   const [popularVideos, setPopularVideos] = useState([]);
-  const [searchVideos, setSearchVideos] = useState([])
 
   const key = process.env.REACT_APP_API_KEY;
 
@@ -44,14 +43,6 @@ function App() {
       });
   }, []);
 
-  function searchYoutube(search) {
-    fetch (`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${search}&key=${key}`)
-    .then((res) => res.json())
-    .then((res) => {
-        setSearchVideos(res)
-    })
-}
-
   return (
     <div className={`App ${theme}`}>
       <Router>
@@ -64,11 +55,11 @@ function App() {
         <div className="wrapper">
           <main>
             <Routes>
-              <Route path="/" element={<Home popularVideos={popularVideos} searchVideos={searchVideos} searchYoutube={searchYoutube}/>} />
+              <Route path="/" element={<Home popularVideos={popularVideos} />} />
               <Route path="/About" element={<About />} />
               <Route path="/DevsAbout" element={<DevsAbout />} />
               <Route path="/ProjectDesc" element={<ProjectDesc />} />
-              {/* <Route path="/searchresults" element={<SearchResults />} /> */}
+              <Route path="/searchresults/:search" element={<SearchResults />} />
               <Route path="/video/:id" element={<Video />} />
             </Routes>
           </main>
