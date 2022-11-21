@@ -80,7 +80,10 @@ function App() {
               <Route path="/About" element={<About />} />
               <Route path="/DevsAbout" element={<DevsAbout />} />
               <Route path="/ProjectDesc" element={<ProjectDesc />} />
-              {/* <Route path="/searchresults" element={<SearchResults />} /> */}
+              <Route
+                path="/searchresults/:search"
+                element={<SearchResults />}
+              />
               <Route path="/video/:id" element={<Video />} />
             </Routes>
           </main>
