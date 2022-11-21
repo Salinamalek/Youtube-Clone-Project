@@ -127,3 +127,26 @@ li {
 #formButton:hover {
   background-color: rgb(119, 114, 114);
 }
+
+#searchBar {
+  all: unset;
+  color: black;
+  text-align: left;
+  border-radius: 5px;
+  background-color: white;
+  padding: 6px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.searchButton {
+  all: unset;
+  background-color: rgb(209, 209, 209);
+  border-radius: 5px;
+  padding: 5.5px;
+  margin-left: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.searchButton:hover {
+  background-color: rgb(119, 114, 114);
+}

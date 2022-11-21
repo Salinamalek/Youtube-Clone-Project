@@ -25,11 +25,17 @@ export default function Search({ searchVideos, searchYoutube }) {
     <div>
       <form onSubmit={handleSubmit}>
         <label>
-          Search:{" "}
-          <input type="text" name="search" onChange={handleTextChange} />
+          {/* Search:{" "} */}
+          <input
+            id="searchBar"
+            type="text"
+            name="search"
+            onChange={handleTextChange}
+            placeholder="Search..."
+          />
         </label>
         <Link to={`/searchresults/${searchTitle}`}>
-          <input type="submit" value="Submit" />
+          <input className="searchButton" type="submit" value="🔍︎" />
         </Link>
       </form>
     </div>
