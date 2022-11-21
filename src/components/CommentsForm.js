@@ -20,10 +20,12 @@ function CommentsForm() {
   return (
     <section className="form">
       <hr className="hrForm"></hr>
-      <h4>Leave a Comment: </h4>
-      <form>
-        <label id="commenter">Name: </label>
+      <h4 className="commentsForm">Leave a Comment: </h4>
+      <form className="commForm">
+        <label id="commenter">Name</label>
+        <br />
         <input
+          className="commInput"
           type="text"
           id="commenter"
           value={commenter}
@@ -31,8 +33,11 @@ function CommentsForm() {
         ></input>
         <br />
         <br />
-        <label id="comment">Comment: </label>
+        <label id="comment">Comment</label>
+        <br />
+
         <input
+          className="commInput"
           type="text"
           id="comment"
           value={comment}
@@ -40,7 +45,7 @@ function CommentsForm() {
         ></input>
         <br />
         <br />
-        <button type="submit" onClick={handleFormSubmit} className="formButton">
+        <button id="formButton" type="submit" onClick={handleFormSubmit}>
           Add Comment
         </button>
       </form>

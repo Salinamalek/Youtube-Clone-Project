@@ -19,14 +19,13 @@ export default function Search({ searchVideos, searchYoutube }) {
   function handleSubmit(event) {
     event.preventDefault();
     // searchYoutube(searchTitle)
-    event.target.reset();
   }
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <label>
-          Search
+          Search:{" "}
           <input type="text" name="search" onChange={handleTextChange} />
         </label>
         <Link to={`/searchresults/${searchTitle}`}>
