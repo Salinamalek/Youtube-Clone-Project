@@ -63,7 +63,7 @@ a:hover {
 }
 
 .theme:hover {
-  background-color: rgb(209, 209, 209);
+  background-color: rgb(119, 114, 114);
 }
 
 li {
@@ -80,4 +80,16 @@ li {
   font-weight: bold;
   font-size: larger;
   color: red;
+}
+
+#showMoreButton {
+  all: unset;
+  background-color: rgb(209, 209, 209);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#showMoreButton:hover {
+  background-color: rgb(119, 114, 114);
 }

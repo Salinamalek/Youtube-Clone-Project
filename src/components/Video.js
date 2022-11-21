@@ -46,11 +46,11 @@ export default function Video() {
           Likes
         </p>
         {/* <p>{video.items ? video.items[0].snippet.description : "loading..."}</p> */}
-        <button key={videosId.id} id="showMoreButton" onClick={toggleShowMore}>
+        <button key={videosId} id="showMoreButton" onClick={toggleShowMore}>
           {!showMore ? "Show More ..." : "Show Less ..."}
         </button>
+        {showMore && <ShowMore video={video} />}
       </div>
-      {showMore && <ShowMore />}
       <div className="commentsForm">
         <CommentsForm />
       </div>
