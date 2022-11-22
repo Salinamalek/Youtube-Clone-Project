@@ -18,8 +18,8 @@ export default function Search({searchVideos, searchYoutube}) {
 
     function handleSubmit(event) {
         event.preventDefault()
-        // searchYoutube(searchTitle)
         event.target.reset()
+        setSearchTitle("")
     }
     
     return (
