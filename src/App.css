@@ -12,18 +12,18 @@ header {
   color: rgb(255, 255, 255);
   padding: 20px;
   margin-bottom: 20px;
-  /* border: 2px solid blue; */
 }
 
 .wrapper {
-  display: grid;
-  /* border: 2px solid green; */
+  display: flex;
 }
 
-/* h1 {
-  text-align: left;
-  border: 2px solid black;
-} */
+.homeVids section {
+  /* border: 5px solid green; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
 
 .you {
   color: rgb(0, 0, 0);
@@ -38,7 +38,7 @@ header {
 }
 
 a {
-  color: rgb(255, 255, 255);
+  color: rgb(244, 130, 130);
   text-decoration: none;
 }
 
@@ -159,5 +159,5 @@ li {
 }
 
 h4 {
-  color: rgb(244, 130, 130);
+  color: rgb(255, 0, 0);
 }

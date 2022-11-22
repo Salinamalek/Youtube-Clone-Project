@@ -13,6 +13,8 @@ import Video from "./components/Video";
 import "./App.css";
 import Search from "./components/Search";
 import SearchResults from "./components/SearchResults";
+// modal test
+import Modal from "./components/Modal";
 
 function App() {
   const [popularVideos, setPopularVideos] = useState([]);
@@ -63,6 +65,8 @@ function App() {
           ☾
         </button>
         <br />
+        <br />
+        <Modal />
         <br />
         <div className="wrapper">
           <main>

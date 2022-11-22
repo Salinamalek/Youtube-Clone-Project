@@ -17,6 +17,8 @@ function CommentsForm() {
     setComments(arr);
   }
 
+  // localStorage.setItem(); //LOCAL STORAGE TO PERSIST COMMENTS
+
   return (
     <section className="form">
       <hr className="hrForm"></hr>

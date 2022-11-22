@@ -10,19 +10,17 @@ export default function Home({ popularVideos }) {
   const [loadingError, setLoadingError] = useState(false);
 
   return (
-    <section>
+    <div className="homeVids">
       {loadingError ? (
         <ErrorMessage />
       ) : (
-        <div>
-          <section>
-            {popularVideos.items &&
-              popularVideos.items.map((video) => {
-                return <PopularPreview video={video} key={video.etag} />;
-              })}
-          </section>
-        </div>
+        <section>
+          {popularVideos.items &&
+            popularVideos.items.map((video) => {
+              return <PopularPreview video={video} key={video.etag} />;
+            })}
+        </section>
       )}
-    </section>
+    </div>
   );
 }

@@ -15,23 +15,28 @@ export default function Search({ searchVideos, searchYoutube }) {
     setSearchTitle(e.target.value);
   }
 
-    function handleSubmit(event) {
-        event.preventDefault()
-        setSearchTitle("")
-        console.log(searchTitle)
-    }
-    
-    return (
-        <div>
-        <form onSubmit={handleSubmit}>
-            <label>
-                Search
-                <input type="text" name="search" onChange={handleTextChange}/>
-            </label>
-            <Link to={`/searchresults/${searchTitle}`} >
-            <input type="submit" value="Submit" />  
-            </Link>
-        </form>
+  function handleSubmit(event) {
+    event.preventDefault();
+    setSearchTitle("");
+    console.log(searchTitle);
+  }
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          <input
+            id="searchBar"
+            type="text"
+            name="search"
+            onChange={handleTextChange}
+            placeholder="Search..."
+          />
+        </label>
+        <Link to={`/searchresults/${searchTitle}`}>
+          <input className="searchButton" type="submit" value="🔍︎" />
+        </Link>
+      </form>
     </div>
   );
 }
