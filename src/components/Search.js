@@ -12,14 +12,13 @@ export default function Search({ searchVideos, searchYoutube }) {
   const [loadingError, setLoadingError] = useState(false);
 
   function handleTextChange(e) {
-    const title = e.target.value;
-    setSearchTitle(title);
+    setSearchTitle(e.target.value);
   }
 
     function handleSubmit(event) {
         event.preventDefault()
-        event.target.reset()
         setSearchTitle("")
+        console.log(searchTitle)
     }
     
     return (
