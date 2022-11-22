@@ -33,15 +33,17 @@ export default function Video() {
     <div>
       <div className="indVideo">
         <YouTube videoId={videosId.id} />
-        <h1>{video.items ? video.items[0].snippet.title : "loading..."}</h1>
-        <h3>
+        <h1 className="vidTitle">
+          {video.items ? video.items[0].snippet.title : "loading..."}
+        </h1>
+        <h3 className="vidChannel">
           {video.items ? video.items[0].snippet.channelTitle : "loading..."}
         </h3>
-        <p>
+        <p className="vidViews">
           {video.items ? video.items[0].statistics.viewCount : "loading..."}{" "}
           Views
         </p>
-        <p>
+        <p className="vidLikes">
           {video.items ? video.items[0].statistics.likeCount : "loading..."}{" "}
           Likes
         </p>
