@@ -3,19 +3,21 @@
 }
 
 .App {
-  /* display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr; */
   text-align: center;
-  /* border: 2px solid black; */
+  /* border: 2px solid white; */
 }
 
 header {
   background-color: rgb(240, 113, 113);
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 20px;
   margin-bottom: 20px;
   /* border: 2px solid blue; */
+}
+
+.wrapper {
+  display: grid;
+  /* border: 2px solid green; */
 }
 
 /* h1 {
@@ -24,28 +26,138 @@ header {
 } */
 
 .you {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .tube {
-  background-color: red;
-  color: white;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
   border-radius: 15px;
   padding: 4px 7px 4px 7px;
+  box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.26);
 }
 
 a {
-  color: rgb(253, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(240, 113, 113);
+  color: rgb(255, 0, 0);
 }
 
 .linkColor {
-  color: white;
+  color: rgb(255, 255, 255);
+  padding: 7px;
 }
+
 .linkColor:hover {
   color: rgb(0, 0, 0);
+}
+
+.theme {
+  all: unset;
+  background-color: rgb(215, 212, 212);
+  border-radius: 25px;
+  padding: 5px 40px 5px 40px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  font-size: xx-large;
+  margin-bottom: -30px;
+}
+
+.theme:hover {
+  background-color: rgb(119, 114, 114);
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  border: 3px dotted rgb(244, 130, 130);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 10px 10px -25px;
+  text-align: left;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.commenterName {
+  font-weight: bold;
+  font-size: larger;
+  color: rgb(255, 0, 0);
+}
+
+#showMoreButton {
+  all: unset;
+  background-color: rgb(209, 209, 209);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#showMoreButton:hover {
+  background-color: rgb(119, 114, 114);
+  cursor: pointer;
+}
+
+.commentsForm {
+  font-size: larger;
+  text-align: center;
+}
+
+.commForm {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.commInput {
+  margin: 5px;
+  padding: 15px;
+  width: 700px;
+  border-radius: 10px;
+}
+
+#formButton {
+  all: unset;
+  background-color: rgb(209, 209, 209);
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 325px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#formButton:hover {
+  background-color: rgb(119, 114, 114);
+  cursor: pointer;
+}
+
+#searchBar {
+  all: unset;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  padding: 6px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#searchBar:hover {
+  cursor: text;
+}
+
+.searchButton {
+  all: unset;
+  background-color: rgb(209, 209, 209);
+  border-radius: 5px;
+  padding: 5.5px;
+  margin-left: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.searchButton:hover {
+  background-color: rgb(119, 114, 114);
+}
+
+h4 {
+  color: rgb(244, 130, 130);
 }

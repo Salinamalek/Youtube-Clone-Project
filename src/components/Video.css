@@ -1,0 +1,31 @@
+.video {
+  /* display: flex;
+  flex-flow: row wrap; */
+  /* border: 2px solid white; */
+  border-radius: 10px;
+  /* display: block; */
+  box-shadow: 10px 5px 10px 10px rgba(0, 0, 0, 0.23);
+  margin: 30px;
+  margin-top: 30px;
+  padding: 20px;
+  width: 400px;
+  justify-content: center;
+}
+
+.indVideo {
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.23);
+  margin: 10px;
+  padding: 20px;
+  padding-top: 25px;
+  width: 800px;
+}
+
+.commentsForm {
+  margin: 50px;
+}
+
+.vidChannel {
+  color: rgb(240, 113, 113);
+}

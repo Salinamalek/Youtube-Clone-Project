@@ -6,7 +6,7 @@ import PopularPreview from "./PopularPreview";
 import Search from "./Search";
 import ErrorMessage from "./ErrorMessage";
 
-export default function Home({popularVideos}) {
+export default function Home({ popularVideos }) {
   const [loadingError, setLoadingError] = useState(false);
 
   return (
