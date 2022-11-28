@@ -2,10 +2,10 @@
   margin: 0 auto;
 }
 
-/* .App {
+.App {
   text-align: center;
-  border: 2px solid white;
-} */
+  /* border: 2px solid white; */
+}
 
 header {
   background-color: rgb(240, 113, 113);
