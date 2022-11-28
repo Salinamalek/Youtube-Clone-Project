@@ -3,13 +3,15 @@ import { useState } from "react";
 import Preview from "./Preview";
 import ErrorMessage from "./ErrorMessage";
 import SearchResults from "./SearchResults";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "./Search.css";
 
 const key = process.env.REACT_APP_API_KEY;
 
-export default function Search({ searchVideos, searchYoutube }) {
+export default function Search() {
   const [searchTitle, setSearchTitle] = useState("");
   const [loadingError, setLoadingError] = useState(false);
+  const navigate = useNavigate();
 
   function handleTextChange(e) {
     setSearchTitle(e.target.value);
@@ -17,8 +19,8 @@ export default function Search({ searchVideos, searchYoutube }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    setSearchTitle("");
-    console.log(searchTitle);
+    navigate(`/searchresults/${searchTitle}`);
+    event.target.reset();
   }
 
   return (
@@ -33,9 +35,9 @@ export default function Search({ searchVideos, searchYoutube }) {
             placeholder="Search..."
           />
         </label>
-        <Link to={`/searchresults/${searchTitle}`}>
-          <input className="searchButton" type="submit" value="🔍︎" />
-        </Link>
+        {/* <Link to={`/searchresults/${searchTitle}`} > */}
+        <input className="searchButton" type="submit" value="🔍︎" />
+        {/* </Link> */}
       </form>
     </div>
   );

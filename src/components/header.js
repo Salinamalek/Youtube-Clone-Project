@@ -3,7 +3,7 @@ import "./Modal.css";
 import { Link } from "react-router-dom";
 import Search from "./Search";
 
-export default function Header() {
+export default function Header({ searchTitle, setSearchTitle }) {
   return (
     <div>
       <header>
@@ -20,7 +20,7 @@ export default function Header() {
             <Modal />
           </span>
           <span id="searchForm">
-            <Search />
+            <Search setSearchTitle={setSearchTitle} searchTitle={searchTitle} />
           </span>
         </h1>
       </header>

@@ -19,6 +19,7 @@ import Modal from "./components/Modal";
 function App() {
   const [popularVideos, setPopularVideos] = useState([]);
   const [searchVideos, setSearchVideos] = useState([]);
+  // const [searchTitle, setSearchTitle] = useState("");
 
   const key = process.env.REACT_APP_API_KEY;
 
@@ -84,7 +85,7 @@ function App() {
               <Route path="/ProjectDesc" element={<ProjectDesc />} />
               <Route
                 path="/searchresults/:search"
-                element={<SearchResults />}
+                element={<SearchResults  />}
               />
               <Route path="/video/:id" element={<Video />} />
             </Routes>
