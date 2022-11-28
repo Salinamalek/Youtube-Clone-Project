@@ -19,12 +19,18 @@ export default function Search() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    navigate(`/searchresults/${searchTitle}`);
+    if (!searchTitle) {
+      setLoadingError(true);
+    } else {
+      setLoadingError(false);
+      navigate(`/searchresults/${searchTitle}`);
+    }
     event.target.reset();
   }
 
   return (
     <div>
+      {loadingError ? <ErrorMessage /> : null}
       <form onSubmit={handleSubmit}>
         <label>
           <input

@@ -23,7 +23,7 @@ export default function SearchResults({ searchTitle, setSearchTitle }) {
   }, []);
 
   return (
-    <section>
+    <section className="resultsVid">
       {searchVideos.items &&
         searchVideos.items.map((video) => {
           return <Preview video={video} key={video.etag} />;
