@@ -10,7 +10,7 @@ import Preview from "./Preview";
 
 export default function Video() {
   const [video, setVideo] = useState({});
-  const [relatedVideos, setRelatedVideos] = useState([])
+  const [relatedVideos, setRelatedVideos] = useState([]);
   const [loadingError, setLoadingError] = useState(false);
   const videosId = useParams();
   const [showMore, setShowMore] = useState(false);
@@ -29,15 +29,16 @@ export default function Video() {
         console.log(error);
         setLoadingError(true);
       });
-      getRelatedVideos(videosId.id)
+
+    getRelatedVideos(videosId.id)
       .then((results) => {
-        setRelatedVideos(results)
+        setRelatedVideos(results);
         setLoadingError(false);
-    })
-    .catch((error) => {
-      console.log(error);
-      setLoadingError(true);
       })
+      .catch((error) => {
+        console.log(error);
+        setLoadingError(true);
+      });
   }, [videosId]);
 
   return (
@@ -63,15 +64,16 @@ export default function Video() {
         </button>
         {showMore && <ShowMore video={video} />}
       </div>
+      <section className="relatedVids">
+        <h2 className="relVids">Related Videos</h2>
+        {relatedVideos.items &&
+          relatedVideos.items.map((video) => {
+            return <Preview video={video} key={video.etag} />;
+          })}
+      </section>
       <div className="commentsForm">
         <CommentsForm />
       </div>
-      <section>
-        {relatedVideos.items &&
-        relatedVideos.items.map((video) => {
-            return <Preview video={video} key={video.etag} />
-        })}
-      </section>
     </div>
   );
 }

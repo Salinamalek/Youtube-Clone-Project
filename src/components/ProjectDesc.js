@@ -1,8 +1,9 @@
 export default function ProjectDesc() {
   return (
-    <section>
-      <div>
+    <section className="projDesc">
+      {/* <div>
         <h1>About Our Project</h1>
+        <br />
         <h3>
           The purpose of this fully functional application is to serve as a
           clone of YouTube. This project tests our coding skills and our
@@ -10,7 +11,7 @@ export default function ProjectDesc() {
           keyword and the results will display a list of videos related to that
           keyword, just like YouTube.
         </h3>
-      </div>
+      </div> */}
     </section>
   );
 }

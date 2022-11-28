@@ -36,3 +36,15 @@
 .vidChannel {
   color: rgb(240, 113, 113);
 }
+
+.relatedVids {
+  /* border: 2px solid blue; */
+
+  margin: 20px;
+  padding: 20px 175px 10px 175px;
+}
+
+.relVids {
+  font-size: x-large;
+  color: red;
+}

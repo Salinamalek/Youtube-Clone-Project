@@ -6,12 +6,19 @@ body.active-modal {
 }
 .btn-modal {
   all: unset;
-  font-size: 24px;
+  font-size: 15px;
   /* padding-left: 7px; */
+  background-color: rgb(209, 209, 209);
+  color: red;
+  padding: 10px;
+
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn-modal:hover {
-  color: black;
+  color: rgb(255, 255, 255);
+  background-color: rgb(119, 114, 114);
   cursor: pointer;
 }
 
