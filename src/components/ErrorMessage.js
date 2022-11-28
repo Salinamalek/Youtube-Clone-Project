@@ -1,7 +1,9 @@
+import Modal from "./Modal";
+
 export default function ErrorMessage() {
-    return (
-      <section className="error">
-        <p>Something went wrong! Please try again later.</p>
-      </section>
-    );
-  }
+  return (
+    <section className="error">
+      <Modal />
+    </section>
+  );
+}
