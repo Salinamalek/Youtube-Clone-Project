@@ -14,17 +14,12 @@ export default function SearchResults({searchTitle, setSearchTitle}) {
         .then(res => {
             setSearchVideos(res)
             setLoadingError(false)
-            setSearchTitle("")
           })
           .catch((error) => {
             console.log(error)
             setLoadingError(true)
         })
     }, [])
-
-    // if (searchVideos) {
-    //     setSearchTitle("")
-    // }
     
     return (
         <section>

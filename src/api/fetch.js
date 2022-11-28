@@ -13,5 +13,5 @@ export function getSearch(search) {
 }
 
 export function getRelatedVideos(id) {
-    return fetch (`https://youtube.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${id}&type=video&key=${key}`)
+    return fetch (`https://youtube.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${id}&type=video&key=${key}`).then(res => res.json())
 }
