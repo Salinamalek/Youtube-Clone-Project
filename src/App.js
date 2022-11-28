@@ -17,6 +17,7 @@ import SearchResults from "./components/SearchResults";
 function App() {
   const [popularVideos, setPopularVideos] = useState([]);
   const [searchVideos, setSearchVideos] = useState([]);
+  const [searchTitle, setSearchTitle] = useState("");
 
   const key = process.env.REACT_APP_API_KEY;
 
@@ -57,7 +58,7 @@ function App() {
     <div className={`App ${theme}`}>
       <Router>
         <div className="header">
-          <Header />
+          <Header setSearchTitle={setSearchTitle} searchTitle={searchTitle} />
         </div>
         <button className="theme" onClick={toggleTheme}>
           ☾
@@ -82,7 +83,7 @@ function App() {
               <Route path="/ProjectDesc" element={<ProjectDesc />} />
               <Route
                 path="/searchresults/:search"
-                element={<SearchResults />}
+                element={<SearchResults searchTitle={searchTitle} setSearchTitle={setSearchTitle} />}
               />
               <Route path="/video/:id" element={<Video />} />
             </Routes>

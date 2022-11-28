@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { getSearch } from "../api/fetch";
 import ErrorMessage from "./ErrorMessage";
 
-export default function SearchResults() {
+export default function SearchResults({searchTitle, setSearchTitle}) {
     const [searchVideos, setSearchVideos] = useState([])
     const searchQuery = useParams()
     const [loadingError, setLoadingError] = useState(false)
@@ -14,12 +14,17 @@ export default function SearchResults() {
         .then(res => {
             setSearchVideos(res)
             setLoadingError(false)
+            setSearchTitle("")
           })
           .catch((error) => {
             console.log(error)
             setLoadingError(true)
         })
-    }, [searchQuery])
+    }, [])
+
+    // if (searchVideos) {
+    //     setSearchTitle("")
+    // }
     
     return (
         <section>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Search from "./Search";
 
-export default function Header() {
+export default function Header({searchTitle, setSearchTitle}) {
   return (
     <div>
       <header>
@@ -19,7 +19,7 @@ export default function Header() {
           </Link>
         </h2>
         <br />
-        <Search />
+        <Search setSearchTitle={setSearchTitle} searchTitle={searchTitle} />
       </header>
     </div>
   );

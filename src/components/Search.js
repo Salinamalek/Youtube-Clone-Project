@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 const key = process.env.REACT_APP_API_KEY;
 
-export default function Search({ searchVideos, searchYoutube }) {
-  const [searchTitle, setSearchTitle] = useState("");
+export default function Search({searchTitle, setSearchTitle}) {
+//   const [searchTitle, setSearchTitle] = useState("");
   const [loadingError, setLoadingError] = useState(false);
 
   function handleTextChange(e) {
@@ -17,9 +17,10 @@ export default function Search({ searchVideos, searchYoutube }) {
 
     function handleSubmit(event) {
         event.preventDefault()
-        setSearchTitle("")
-        console.log(searchTitle)
+        event.setSearchTitle("")
     }
+
+    console.log(searchTitle)
     
     return (
         <div>
