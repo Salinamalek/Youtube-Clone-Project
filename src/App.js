@@ -60,13 +60,11 @@ function App() {
       <Router>
         <div className="header">
           <Header />
+          <button className="theme" onClick={toggleTheme}>
+            ☾
+          </button>
         </div>
-        <button className="theme" onClick={toggleTheme}>
-          ☾
-        </button>
-        <br />
-        <br />
-        <Modal />
+        {/* <Modal /> */}
         <br />
         <div className="wrapper">
           <main>
