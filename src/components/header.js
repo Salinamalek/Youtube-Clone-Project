@@ -1,25 +1,28 @@
+import Modal from "./Modal";
+import "./Modal.css";
 import { Link } from "react-router-dom";
 import Search from "./Search";
 
-export default function Header({searchTitle, setSearchTitle}) {
+export default function Header({ searchTitle, setSearchTitle }) {
   return (
     <div>
       <header>
         <h1>
           <span className="you">You</span>
           <span className="tube">Tube</span>
+          <span className="homeAndAboutLinks">
+            <Link to="/" className="linkColor">
+              Home
+            </Link>
+            <Link to="/about" className="linkColor">
+              About
+            </Link>
+            {/* <Modal /> */}
+          </span>
+          <span id="searchForm">
+            <Search setSearchTitle={setSearchTitle} searchTitle={searchTitle} />
+          </span>
         </h1>
-        <br />
-        <h2>
-          <Link to="/" className="linkColor">
-            Home
-          </Link>
-          <Link to="/about" className="linkColor">
-            About
-          </Link>
-        </h2>
-        <br />
-        <Search setSearchTitle={setSearchTitle} searchTitle={searchTitle} />
       </header>
     </div>
   );

@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 function CommentsForm() {
   const [commenter, setCommenter] = useState("");
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
+  // const [comments, setComments] = useState(
+  //   localStorage.getItem("comments") || []
+  // );
 
   function handleFormSubmit(e) {
     e.preventDefault();
@@ -17,7 +20,11 @@ function CommentsForm() {
     setComments(arr);
   }
 
-  // localStorage.setItem(); //LOCAL STORAGE TO PERSIST COMMENTS
+  //LOCAL STORAGE TO PERSIST COMMENTS
+  // useEffect(() => {
+  //   localStorage.setItem("comments", comments);
+  //   document.body.className = comments;
+  // }, [comments]);
 
   return (
     <section className="form">

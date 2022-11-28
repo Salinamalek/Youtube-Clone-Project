@@ -60,13 +60,10 @@ function App() {
       <Router>
         <div className="header">
           <Header />
+          <button className="theme" onClick={toggleTheme}>
+            ☾
+          </button>
         </div>
-        <button className="theme" onClick={toggleTheme}>
-          ☾
-        </button>
-        <br />
-        <br />
-        <Modal />
         <br />
         <div className="wrapper">
           <main>
@@ -86,7 +83,7 @@ function App() {
               <Route path="/ProjectDesc" element={<ProjectDesc />} />
               <Route
                 path="/searchresults/:search"
-                element={<SearchResults  />}
+                element={<SearchResults />}
               />
               <Route path="/video/:id" element={<Video />} />
             </Routes>
