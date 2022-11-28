@@ -15,7 +15,6 @@ export default function SearchResults({ searchTitle, setSearchTitle }) {
       .then((res) => {
         setSearchVideos(res);
         setLoadingError(false);
-        setSearchTitle("");
       })
       .catch((error) => {
         console.log(error);
@@ -23,12 +22,8 @@ export default function SearchResults({ searchTitle, setSearchTitle }) {
       });
   }, []);
 
-  // if (searchVideos) {
-  //     setSearchTitle("")
-  // }
-
   return (
-    <section className="resultsVid">
+    <section>
       {searchVideos.items &&
         searchVideos.items.map((video) => {
           return <Preview video={video} key={video.etag} />;
