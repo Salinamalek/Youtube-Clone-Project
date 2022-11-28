@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./Video.css";
 
 export default function Preview({ video }) {
   return (

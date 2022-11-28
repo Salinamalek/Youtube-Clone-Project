@@ -17,7 +17,7 @@ export default function Header({ searchTitle, setSearchTitle }) {
             <Link to="/about" className="linkColor">
               About
             </Link>
-            <Modal />
+            {/* <Modal /> */}
           </span>
           <span id="searchForm">
             <Search setSearchTitle={setSearchTitle} searchTitle={searchTitle} />

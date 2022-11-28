@@ -65,7 +65,6 @@ function App() {
             ☾
           </button>
         </div>
-        {/* <Modal /> */}
         <br />
         <div className="wrapper">
           <main>
@@ -85,7 +84,7 @@ function App() {
               <Route path="/ProjectDesc" element={<ProjectDesc />} />
               <Route
                 path="/searchresults/:search"
-                element={<SearchResults  />}
+                element={<SearchResults />}
               />
               <Route path="/video/:id" element={<Video />} />
             </Routes>
