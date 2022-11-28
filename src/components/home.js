@@ -1,9 +1,6 @@
-import { useState, useEffect } from "react";
-
-import { getPopularVideos } from "../api/fetch";
+import { useState} from "react";
 
 import PopularPreview from "./PopularPreview";
-import Search from "./Search";
 import ErrorMessage from "./ErrorMessage";
 
 export default function Home({ popularVideos }) {

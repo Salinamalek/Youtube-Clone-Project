@@ -20,6 +20,7 @@ export default function Search() {
         event.preventDefault()
         navigate(`/searchresults/${searchTitle}`)
         event.target.reset()
+        // setSearchTitle("")
     }
     
     return (

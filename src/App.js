@@ -11,7 +11,6 @@ import ProjectDesc from "./components/ProjectDesc";
 import Video from "./components/Video";
 
 import "./App.css";
-import Search from "./components/Search";
 import SearchResults from "./components/SearchResults";
 // modal test
 import Modal from "./components/Modal";
