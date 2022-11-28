@@ -3,13 +3,14 @@ import { useState } from "react";
 import Preview from "./Preview";
 import ErrorMessage from "./ErrorMessage";
 import SearchResults from "./SearchResults";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const key = process.env.REACT_APP_API_KEY;
 
-export default function Search({searchTitle, setSearchTitle}) {
-//   const [searchTitle, setSearchTitle] = useState("");
+export default function Search() {
+  const [searchTitle, setSearchTitle] = useState("");
   const [loadingError, setLoadingError] = useState(false);
+  const navigate = useNavigate()
 
   function handleTextChange(e) {
     setSearchTitle(e.target.value);
@@ -17,10 +18,9 @@ export default function Search({searchTitle, setSearchTitle}) {
 
     function handleSubmit(event) {
         event.preventDefault()
-        event.setSearchTitle("")
+        navigate(`/searchresults/${searchTitle}`)
+        event.target.reset()
     }
-
-    console.log(searchTitle)
     
     return (
         <div>
@@ -29,9 +29,9 @@ export default function Search({searchTitle, setSearchTitle}) {
                 Search
                 <input type="text" name="search" onChange={handleTextChange}/>
             </label>
-            <Link to={`/searchresults/${searchTitle}`} >
+            {/* <Link to={`/searchresults/${searchTitle}`} > */}
             <input type="submit" value="Submit" />  
-            </Link>
+            {/* </Link> */}
         </form>
     </div>
   );
