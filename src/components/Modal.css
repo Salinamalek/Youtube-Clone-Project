@@ -1,12 +1,14 @@
 body.active-modal {
   overflow-y: hidden;
 }
-
+.errorMsg {
+  color: red;
+}
 .btn-modal {
   all: unset;
-
   font-size: 24px;
-  padding-left: 7px;
+  /* padding-left: 7px; */
+  background-color: ;
 }
 
 .btn-modal:hover {

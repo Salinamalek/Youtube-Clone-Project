@@ -17,7 +17,7 @@ export default function Modal() {
   return (
     <>
       <button onClick={toggleModal} className="btn-modal">
-        ERROR: Click Here for More Info
+        ERROR! CLICK HERE
       </button>
 
       {modal && (
