@@ -1,7 +1,36 @@
-export default function DevsAbout() {
+import { Link } from "react-router-dom";
+
+export default function About() {
   return (
-    <section className="devsAbout">
-      {/* <div className="devs">
+    <section>
+      <div className="aboutHeader">
+        <div>
+          <h1>About Our Project</h1>
+          <br />
+          <br />
+          <p className="projDesc">
+            The purpose of this fully functional application is to serve as a
+            clone of YouTube. This project tests our coding skills and our
+            understanding of JavaScript and React. Users are able to search up a
+            keyword and the results will display a list of videos related to
+            that keyword, just like YouTube.
+          </p>
+        </div>
+        <h1>About Us</h1>
+      </div>
+      <br />
+      <br />
+      {/* <div>
+        <p>
+          <Link to="/ProjectDesc">Project Description</Link>
+        </p>
+        <br />
+        <p>
+          <Link to="/DevsAbout">About the Devs</Link>
+        </p>
+      </div> */}
+
+      <div className="devs">
         <div className="salina">
           <h1>Salina Malek</h1>
           <br />
@@ -31,6 +60,8 @@ export default function DevsAbout() {
           <br />
           <br />
         </div>
+        <hr className="devHr" />
+        <br />
         <div className="daniel">
           <h1>Daniel Rodriguez</h1>
           <br />
@@ -61,11 +92,12 @@ export default function DevsAbout() {
         </div>
       </div>
       <br />
+      <br />
       <div>
         <footer>
           <p>YouTube™</p>
         </footer>
-      </div> */}
+      </div>
     </section>
   );
 }

@@ -30,7 +30,10 @@ export default function Search() {
 
   return (
     <div>
-      {loadingError ? <ErrorMessage /> : null}
+      <section className="errorMsg">
+        {loadingError ? <ErrorMessage /> : null}
+      </section>
+      <br />
       <form onSubmit={handleSubmit}>
         <label>
           <input

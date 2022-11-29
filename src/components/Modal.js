@@ -17,15 +17,19 @@ export default function Modal() {
   return (
     <>
       <button onClick={toggleModal} className="btn-modal">
-        ERROR: Click Here for More Info
+        ERROR → Click Here
       </button>
 
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content">
-            <h2>ERROR 404</h2>
-            <p>Something went wrong! Please try again later.</p>
+            <h2>ERROR</h2>
+            <img
+              className="errImg"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Error.svg/1200px-Error.svg.png"
+            />
+            <p>Please input a valid search.</p>
             <button className="close-modal" onClick={toggleModal}>
               X
             </button>
