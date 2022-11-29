@@ -18,7 +18,7 @@ export default function DevsAbout() {
       </div>
       <div className="daniel">
         <h1>Daniel Rodriguez</h1>
-        <p>Hello World</p>
+        <p>Hello my name is Daniel Rodriguez and I am a Full Stack Web Development Fellow at the Pursuit Fellowship based out of New York City. The Pursuit Fellowship is an intensive 12 month software engineering fellowship with a 9% acceptance rate and a project-based curriculum which provides experience with languages such as Javascript, CSS, and HTML.</p>
         <a
           href="https://github.com/DanielR2105"
           target="_blank"
