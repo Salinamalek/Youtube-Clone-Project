@@ -6,20 +6,17 @@ import { getPopularVideos } from "./api/fetch";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
-import DevsAbout from "./components/DevsAbout";
-import ProjectDesc from "./components/ProjectDesc";
+// import DevsAbout from "./components/DevsAbout";
+// import ProjectDesc from "./components/ProjectDesc";
 import Video from "./components/Video";
 
 import "./App.css";
-import Search from "./components/Search";
 import SearchResults from "./components/SearchResults";
-// modal test
-import Modal from "./components/Modal";
+
 
 function App() {
   const [popularVideos, setPopularVideos] = useState([]);
   const [searchVideos, setSearchVideos] = useState([]);
-  // const [searchTitle, setSearchTitle] = useState("");
 
   const key = process.env.REACT_APP_API_KEY;
 
@@ -80,8 +77,8 @@ function App() {
                 }
               />
               <Route path="/About" element={<About />} />
-              <Route path="/DevsAbout" element={<DevsAbout />} />
-              <Route path="/ProjectDesc" element={<ProjectDesc />} />
+              {/* <Route path="/DevsAbout" element={<DevsAbout />} />
+              <Route path="/ProjectDesc" element={<ProjectDesc />} /> */}
               <Route
                 path="/searchresults/:search"
                 element={<SearchResults />}

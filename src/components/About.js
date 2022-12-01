@@ -1,12 +1,9 @@
-import { Link } from "react-router-dom";
-
 export default function About() {
   return (
     <section>
       <div className="aboutHeader">
         <div>
           <h1>About Our Project</h1>
-          <br />
           <br />
           <p className="projDesc">
             The purpose of this fully functional application is to serve as a
@@ -20,15 +17,6 @@ export default function About() {
       </div>
       <br />
       <br />
-      {/* <div>
-        <p>
-          <Link to="/ProjectDesc">Project Description</Link>
-        </p>
-        <br />
-        <p>
-          <Link to="/DevsAbout">About the Devs</Link>
-        </p>
-      </div> */}
 
       <div className="devs">
         <div className="salina">

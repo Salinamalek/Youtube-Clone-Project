@@ -2,7 +2,6 @@ import YouTube from "react-youtube";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getOneVideo, getRelatedVideos } from "../api/fetch";
-import ErrorMessage from "./ErrorMessage";
 import CommentsForm from "./CommentsForm";
 import ShowMore from "./ShowMore";
 import "./Video.css";

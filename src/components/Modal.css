@@ -1,24 +1,26 @@
 body.active-modal {
   overflow-y: hidden;
 }
+
 .errorMsg {
   color: red;
 }
 .btn-modal {
   all: unset;
   font-size: 15px;
-  /* padding-left: 7px; */
-  background-color: rgb(209, 209, 209);
-  color: red;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 10px;
-
-  border-radius: 10px;
+  margin-top: 25px;
+  border-radius: 15px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  border: 3px solid rgb(255, 255, 255);
 }
 
 .btn-modal:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(119, 114, 114);
+  color: rgb(255, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(255, 0, 0);
   cursor: pointer;
 }
 
@@ -44,10 +46,10 @@ body.active-modal {
   line-height: 1.4;
   background: #f1f1f1;
   padding: 14px 28px;
-  border-radius: 3px;
+  border-radius: 10px;
   max-width: 600px;
   min-width: 300px;
-  color: black;
+  color: rgb(244, 4, 3);
   text-align: center;
 }
 
@@ -56,4 +58,5 @@ body.active-modal {
   top: 10px;
   right: 10px;
   padding: 5px 7px;
+  border-radius: 10px;
 }

@@ -8,11 +8,13 @@ export default function Modal() {
     setModal(!modal);
   };
 
+  
   if (modal) {
     document.body.classList.add("active-modal");
   } else {
     document.body.classList.remove("active-modal");
   }
+
 
   return (
     <>
@@ -39,6 +41,7 @@ export default function Modal() {
     </>
   );
 
+  // Log in feature
   // return (
   //   <>
   //     <button onClick={toggleModal} className="btn-modal">

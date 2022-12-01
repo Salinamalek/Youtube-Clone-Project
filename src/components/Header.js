@@ -2,6 +2,7 @@ import Modal from "./Modal";
 import "./Modal.css";
 import { Link } from "react-router-dom";
 import Search from "./Search";
+import LogIn from "./LogIn";
 
 export default function Header({ searchTitle, setSearchTitle }) {
   return (
@@ -17,7 +18,7 @@ export default function Header({ searchTitle, setSearchTitle }) {
             <Link to="/about" className="linkColor">
               About
             </Link>
-            {/* <Modal /> */}
+            <LogIn />
           </span>
           <span id="searchForm">
             <Search setSearchTitle={setSearchTitle} searchTitle={searchTitle} />

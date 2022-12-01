@@ -2,7 +2,6 @@ import Preview from "./Preview";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getSearch } from "../api/fetch";
-import ErrorMessage from "./ErrorMessage";
 import "./SearchResults.css";
 
 export default function SearchResults({ searchTitle, setSearchTitle }) {

@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-import Preview from "./Preview";
 import ErrorMessage from "./ErrorMessage";
-import SearchResults from "./SearchResults";
 import { useNavigate } from "react-router-dom";
 import "./Search.css";
 
@@ -44,9 +42,7 @@ export default function Search() {
             placeholder="Search..."
           />
         </label>
-        {/* <Link to={`/searchresults/${searchTitle}`} > */}
         <input className="searchButton" type="submit" value="🔍︎" />
-        {/* </Link> */}
       </form>
     </div>
   );
