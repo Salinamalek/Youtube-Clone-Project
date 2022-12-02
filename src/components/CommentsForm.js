@@ -19,11 +19,6 @@ function CommentsForm() {
     setComments(arr);
   }
 
-  //LOCAL STORAGE TO PERSIST COMMENTS
-  // useEffect(() => {
-  //   localStorage.setItem("comments", comments);
-  //   document.body.className = comments;
-  // }, []);
 
   return (
     <section className="form">

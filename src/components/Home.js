@@ -1,6 +1,4 @@
 import { useState } from "react";
-
-
 import PopularPreview from "./PopularPreview";
 import ErrorMessage from "./ErrorMessage";
 

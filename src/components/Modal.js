@@ -15,7 +15,6 @@ export default function Modal() {
     document.body.classList.remove("active-modal");
   }
 
-
   return (
     <>
       <button onClick={toggleModal} className="btn-modal">
@@ -40,33 +39,4 @@ export default function Modal() {
       )}
     </>
   );
-
-  // Log in feature
-  // return (
-  //   <>
-  //     <button onClick={toggleModal} className="btn-modal">
-  //       Log In
-  //     </button>
-
-  //     {modal && (
-  //       <div className="modal">
-  //         <div onClick={toggleModal} className="overlay"></div>
-  //         <div className="modal-content">
-  //           <h2>LOG IN</h2>
-  //           <form>
-  //             <input placeholder="Username" />
-  //             <br />
-  //             <input placeholder="Password" type="password" />
-  //           </form>
-  //           <button className="logInSubmit" type="submit" onClick={toggleModal}>
-  //             Sign In
-  //           </button>
-  //           <button className="close-modal" onClick={toggleModal}>
-  //             X
-  //           </button>
-  //         </div>
-  //       </div>
-  //     )}
-  //   </>
-  // );
 }

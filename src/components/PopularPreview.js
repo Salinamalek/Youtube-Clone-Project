@@ -8,7 +8,6 @@ export default function PopularPreview({ video }) {
         <img src={video.snippet.thumbnails.medium.url} />
       </Link>
       <h4>{video.snippet.channelTitle}</h4>
-      {/* Stretch feature: Make channels clickable */}
       <p>
         {video.statistics.viewCount} views |{" "}
         {video.snippet.publishedAt.slice(5, 7)}-

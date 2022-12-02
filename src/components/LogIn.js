@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./LogIn.css"
 export default function LogIn(){
 
-    const [logIn, setLogIn] = useState(false);
+  const [logIn, setLogIn] = useState(false);
 
   const toggleLogIn = () => {
     setLogIn(!logIn);
