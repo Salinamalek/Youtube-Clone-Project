@@ -148,13 +148,28 @@ h4 {
   /* font-size: larger; */
 }
 
-.devs,
+/* .devs{
+  border: 5px dotted rgb(255, 0, 0);
+  border-radius: 10px;
+  margin: 10px 300px 10px 300px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
 .aboutHeader {
   border: 5px dotted rgb(255, 0, 0);
   border-radius: 10px;
-  margin: 20px 300px 10px 300px;
+  margin: 10px 300px 10px 300px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  padding: 20px;
+} */
+
+.aboutSection {
+  border: 5px dotted rgb(255, 0, 0);
+  border-radius: 10px;
+  margin: 10px 300px 30px 300px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+
 }
 
 .photo {
@@ -170,10 +185,21 @@ footer {
 .devHr {
   width: 500px;
   height: 2px;
-  /* color: rgb(244, 130, 130); */
+}
+
+.devHr2 {
+  width: 500px;
+  height: 2px;
+  margin-top: 30px;
 }
 
 .errImg {
   width: 100px;
   height: 100px;
+}
+
+.titleAbout {
+  margin-top: 30px;
+  font-size: xx-large;
+  color: red;
 }

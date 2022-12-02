@@ -1,9 +1,10 @@
 export default function About() {
   return (
     <section>
-      <div className="aboutHeader">
+    <div className="aboutSection">
+      <div>
         <div>
-          <h1>About Our Project</h1>
+          <h1 className="titleAbout">About Our Project</h1>
           <br />
           <p className="projDesc">
             The purpose of this fully functional application is to serve as a
@@ -13,14 +14,13 @@ export default function About() {
             that keyword, just like YouTube.
           </p>
         </div>
-        <h1>About Us</h1>
+        <hr className="devHr2"/>
+        <h1 className="titleAbout">About Us</h1>
+        <br/>
       </div>
-      <br />
-      <br />
-
       <div className="devs">
         <div className="salina">
-          <h1>Salina Malek</h1>
+          <h2>Salina Malek</h2>
           <br />
           <img
             className="photo"
@@ -81,6 +81,7 @@ export default function About() {
       </div>
       <br />
       <br />
+      </div>
       <div>
         <footer>
           <p>YouTube™</p>
