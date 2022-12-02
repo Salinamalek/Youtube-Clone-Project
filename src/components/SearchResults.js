@@ -19,7 +19,7 @@ export default function SearchResults({ searchTitle, setSearchTitle }) {
         console.log(error);
         setLoadingError(true);
       });
-  }, []);
+  }, [searchQuery]);
 
   return (
     <section className="resultsVid">
